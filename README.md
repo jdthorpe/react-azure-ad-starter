@@ -26,9 +26,9 @@ This start app integrates the following features:
 1. Create an Azure AD app registration, and collect the Client ID, Tenant ID,
    and Scop in a `.env` file at the root of his repo, like so:
 
-   ```toml
-   REACT_APP_CLIENT_ID={{Azure AD app client ID}}}
-   REACT_APP_AUTHORITY=https://login.microsoftonline.com/{{Azure AD tenant ID}}}
+   ```txt
+   REACT_APP_CLIENT_ID={{Azure AD app client ID}}
+   REACT_APP_AUTHORITY=https://login.microsoftonline.com/{{Azure AD tenant ID}}
    REACT_APP_SCOPE={{ Scope URI }}
    ```
 
