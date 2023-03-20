@@ -66,6 +66,27 @@ useEffect(async () => {
 
 ## Restricting Content to using User Authentication
 
+### Manual control
+
+To conditionally render components manually, the `useUserAccount()` hook provides access to the user account and the the users assigned roles.
+
+```jsx
+import { useUserAccount } from "src/auth/UserAccount";
+
+const MyAwesomeComponent = () => {
+  const AccountInfo = useUserAccount();
+  return (
+    <span>
+      You are{" "}
+      {"admin" in (AccountInfo.roles || []) ? "Authorized" : "Unauthorized"}
+    </span>
+  );
+};
+```
+
+However, the following components will typically offer a more thorough
+Auth/Auth controlled rendering.
+
 ### Private Content
 
 The `PrivateComponent` requires that a user is signed in in order to view the
